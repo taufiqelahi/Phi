@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "809027975895",
+    "project_id": "phiapp-i",
+    "storage_bucket": "phiapp-i.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809027975895:android:cbb8894897e839ad10ce92",
+        "android_client_info": {
+          "package_name": "com.aerobola.phi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "809027975895-fulg01pj56lfbmthtk84bsjptflb76ar.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0xNan-hiZKHfmLjrsUmqOOaVsMG6VdU4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "809027975895-fulg01pj56lfbmthtk84bsjptflb76ar.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
