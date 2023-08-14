@@ -13,6 +13,7 @@ class FillButton extends StatelessWidget {
   final double? height, fontSize;
   final FontWeight? fontWeight;
   final double? width;
+  final BorderRadius ?borderRadius;
 
   const FillButton(
       {Key? key,
@@ -23,7 +24,7 @@ class FillButton extends StatelessWidget {
         this.height,
         this.fontWeight,
         this.fontSize,
-        this.width})
+        this.width, this.borderRadius})
       : super(key: key);
 
   @override
@@ -36,7 +37,7 @@ class FillButton extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 15),
             alignment: Alignment.center,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: borderRadius??BorderRadius.circular(30),
                 border: Border.all(color: containerColor??AllColors.green, width: 2),
                 color: (containerColor ?? AllColors.green)
             ),
