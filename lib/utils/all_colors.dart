@@ -10,6 +10,7 @@ class AllColors {
   static const Color red = Color(0xFFDA2F82);
   static const Color white = Color(0xFFFFFFFF);
   static const Color green=Color(0xFF008000);
+  static const Color whiteSmoke=Color(0xFFEFEFEF);
   static const LinearGradient pinkgradient = LinearGradient(
       colors: [Color(0xFFB8227C), Color(0xFFC93061)],
       begin: Alignment.topLeft,
@@ -26,16 +27,3 @@ class AllColors {
 }
 
 
-class Demo{
-
-  void doit(){
-    Map<String, dynamic> m= {'name':'taufiq', 'age':24};
-    Map<int, int> cors= {
-      0:3, 9:3
-    };
-
-    List<int> numbers=[2,2,3,32,23,23,23,23];
-    Set<int> n={1,1,2,3,4,5,6};
-    print(n);
-  }
-}

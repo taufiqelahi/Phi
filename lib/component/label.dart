@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:phi/utils/all_colors.dart';
 
-enum Fonts { lobster, roboto, inter }
+enum Fonts { lobster, roboto, inter ,workSans}
 
 class Label extends StatelessWidget {
   final Fonts? fonts;
@@ -58,12 +58,15 @@ class Label extends StatelessWidget {
     switch (fonts) {
       case Fonts.lobster:
         return GoogleFonts.lobster(textStyle: defaultTextStyle);
+      case Fonts.workSans:
+        return GoogleFonts.workSans(textStyle: defaultTextStyle);
+
       case Fonts.inter:
         return GoogleFonts.inter(textStyle: defaultTextStyle);
       case Fonts.roboto:
         return GoogleFonts.roboto(textStyle: defaultTextStyle);
       default:
-        return GoogleFonts.roboto(textStyle: defaultTextStyle);
+        return GoogleFonts.workSans(textStyle: defaultTextStyle);
     }
   }
 }
