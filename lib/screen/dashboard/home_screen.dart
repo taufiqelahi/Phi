@@ -75,19 +75,18 @@ class _HomeScreenState extends State<HomeScreen> {
                       padding: const EdgeInsets.only(top: 30),
                       child: RichText(
                         text: TextSpan(
-                            text: '20%',
-                            style: GoogleFonts.workSans(
-                                textStyle: TextStyle(
-                                    fontSize: 40,
-                                    fontWeight: FontWeight.bold,
-                                    color: AllColors.black)
-                            ),
-
+                          text: '20%',
+                          style: GoogleFonts.workSans(
+                              textStyle: TextStyle(
+                                  fontSize: 40,
+                                  fontWeight: FontWeight.bold,
+                                  color: AllColors.black)),
                           children: [
                             TextSpan(
                                 text: ' Discount',
-                                style: TextStyle(fontWeight: FontWeight.normal,fontSize: 30)
-                            )
+                                style: TextStyle(
+                                    fontWeight: FontWeight.normal,
+                                    fontSize: 30))
                           ],
                         ),
                       ),
@@ -100,7 +99,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     const SizedBox(
                       height: 20,
                     ),
-                    FillButton(title: 'Shop now',containerColor: AllColors.black, onPressed: () {}),
+                    FillButton(
+                        title: 'Shop now',
+                        containerColor: AllColors.black,
+                        onPressed: () {}),
                     Transform.translate(
                         offset: Offset(-70, -15),
                         child: Image.asset('assets/greenShoe.png'))
@@ -119,28 +121,114 @@ class _HomeScreenState extends State<HomeScreen> {
               }),
         ),
         DotsIndicator(
-          decorator: DotsDecorator(
-            activeColor: AllColors.black
-          ),
+          mainAxisSize: MainAxisSize.min,
+          decorator: DotsDecorator(activeColor: AllColors.black),
           dotsCount: 7,
           position: current,
-        )
-        // InkWell(
-        //   onTap: () {
-        //     controller.nextPage(
-        //         duration: const Duration(milliseconds: 300), curve:   Curves.linear);
-        //   },
-        //   child:
-        //
-        //   Container(
-        //     height: 40,
-        //     width: 40,
-        //     decoration: BoxDecoration(
-        //       shape: BoxShape.circle,
-        //       color: Color(0xff000000),
-        //     ),
-        //   ),
-        // ),
+        ),
+        SizedBox(
+          height: 80,
+          child: ListView(
+            scrollDirection: Axis.horizontal,
+            children: [
+              FillButton(
+                  title: 'All',
+                  textColor: AllColors.white,
+                  fontSize: FontSize.p1,
+                  containerColor: AllColors.black,
+                  onPressed: () {}),
+              SizedBox(
+                width: 20,
+              ),
+              FillButton(
+                  title: 'Running',
+                  textColor: AllColors.white,
+                  fontSize: FontSize.p1,
+                  containerColor: AllColors.black,
+                  onPressed: () {}),
+              SizedBox(
+                width: 20,
+              ),
+              FillButton(
+                  title: 'Sneakers',
+                  textColor: AllColors.white,
+                  fontSize: FontSize.p1,
+                  containerColor: AllColors.black,
+                  onPressed: () {}),
+              SizedBox(
+                width: 20,
+              ),
+              FillButton(
+                  title: 'Formal ',
+                  textColor: AllColors.white,
+                  fontSize: FontSize.p1,
+                  containerColor: AllColors.black,
+                  onPressed: () {}),
+              SizedBox(
+                width: 20,
+              ),
+              FillButton(
+                  title: 'Casual',
+                  textColor: AllColors.white,
+                  fontSize: FontSize.p1,
+                  containerColor: AllColors.black,
+                  onPressed: () {})
+            ],
+          ),
+        ),
+        Expanded(
+            child: GridView.count(
+          crossAxisCount: 2,
+          childAspectRatio: .7,
+          children: [
+            //for(int x=0; x<10;x++)
+            Container(
+
+             padding:EdgeInsets.symmetric(horizontal: 10),
+              margin: EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: AllColors.whiteSmoke),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+
+                  SizedBox(
+                    width:150,
+                    height: 150,
+                    child: Image.asset(
+                       fit:BoxFit.cover,
+                      'assets/yellowShoe.png',
+
+
+                    ),
+                  ),
+                  Label(
+                    text: 'Air Max 97',
+                    fontSize: FontSize.p1,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  Row(
+                    children: [
+
+                      Label(
+                        text: '\$20.99',
+                        fontSize: FontSize.p1,
+
+                      ),
+                      Spacer(),
+                      CupertinoButton(
+                          padding: EdgeInsets.zero,
+                          child: SvgPicture.asset('assets/arrowForword.svg'), onPressed: (){})
+
+                    ],
+                  ),
+
+                ],
+              ),
+            )
+          ],
+        ))
       ]),
     );
   }

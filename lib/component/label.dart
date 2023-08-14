@@ -66,7 +66,7 @@ class Label extends StatelessWidget {
       case Fonts.roboto:
         return GoogleFonts.roboto(textStyle: defaultTextStyle);
       default:
-        return GoogleFonts.roboto(textStyle: defaultTextStyle);
+        return GoogleFonts.workSans(textStyle: defaultTextStyle);
     }
   }
 }
