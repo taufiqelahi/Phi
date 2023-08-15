@@ -14,33 +14,36 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-product _$productFromJson(Map<String, dynamic> json) {
-  return _product.fromJson(json);
+Product _$ProductFromJson(Map<String, dynamic> json) {
+  return _Product.fromJson(json);
 }
 
 /// @nodoc
-mixin _$product {
-  String get firstName => throw _privateConstructorUsedError;
-  String get lastName => throw _privateConstructorUsedError;
-  int get age => throw _privateConstructorUsedError;
+mixin _$Product {
+  String get category => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
+  double get price => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
+  String get image => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $productCopyWith<product> get copyWith => throw _privateConstructorUsedError;
+  $ProductCopyWith<Product> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $productCopyWith<$Res> {
-  factory $productCopyWith(product value, $Res Function(product) then) =
-      _$productCopyWithImpl<$Res, product>;
+abstract class $ProductCopyWith<$Res> {
+  factory $ProductCopyWith(Product value, $Res Function(Product) then) =
+      _$ProductCopyWithImpl<$Res, Product>;
   @useResult
-  $Res call({String firstName, String lastName, int age});
+  $Res call(
+      {String category, String id, double price, String title, String image});
 }
 
 /// @nodoc
-class _$productCopyWithImpl<$Res, $Val extends product>
-    implements $productCopyWith<$Res> {
-  _$productCopyWithImpl(this._value, this._then);
+class _$ProductCopyWithImpl<$Res, $Val extends Product>
+    implements $ProductCopyWith<$Res> {
+  _$ProductCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -50,145 +53,184 @@ class _$productCopyWithImpl<$Res, $Val extends product>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? firstName = null,
-    Object? lastName = null,
-    Object? age = null,
+    Object? category = null,
+    Object? id = null,
+    Object? price = null,
+    Object? title = null,
+    Object? image = null,
   }) {
     return _then(_value.copyWith(
-      firstName: null == firstName
-          ? _value.firstName
-          : firstName // ignore: cast_nullable_to_non_nullable
+      category: null == category
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
               as String,
-      lastName: null == lastName
-          ? _value.lastName
-          : lastName // ignore: cast_nullable_to_non_nullable
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String,
-      age: null == age
-          ? _value.age
-          : age // ignore: cast_nullable_to_non_nullable
-              as int,
+      price: null == price
+          ? _value.price
+          : price // ignore: cast_nullable_to_non_nullable
+              as double,
+      title: null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      image: null == image
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$_productCopyWith<$Res> implements $productCopyWith<$Res> {
-  factory _$$_productCopyWith(
-          _$_product value, $Res Function(_$_product) then) =
-      __$$_productCopyWithImpl<$Res>;
+abstract class _$$_ProductCopyWith<$Res> implements $ProductCopyWith<$Res> {
+  factory _$$_ProductCopyWith(
+          _$_Product value, $Res Function(_$_Product) then) =
+      __$$_ProductCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String firstName, String lastName, int age});
+  $Res call(
+      {String category, String id, double price, String title, String image});
 }
 
 /// @nodoc
-class __$$_productCopyWithImpl<$Res>
-    extends _$productCopyWithImpl<$Res, _$_product>
-    implements _$$_productCopyWith<$Res> {
-  __$$_productCopyWithImpl(_$_product _value, $Res Function(_$_product) _then)
+class __$$_ProductCopyWithImpl<$Res>
+    extends _$ProductCopyWithImpl<$Res, _$_Product>
+    implements _$$_ProductCopyWith<$Res> {
+  __$$_ProductCopyWithImpl(_$_Product _value, $Res Function(_$_Product) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? firstName = null,
-    Object? lastName = null,
-    Object? age = null,
+    Object? category = null,
+    Object? id = null,
+    Object? price = null,
+    Object? title = null,
+    Object? image = null,
   }) {
-    return _then(_$_product(
-      firstName: null == firstName
-          ? _value.firstName
-          : firstName // ignore: cast_nullable_to_non_nullable
+    return _then(_$_Product(
+      category: null == category
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
               as String,
-      lastName: null == lastName
-          ? _value.lastName
-          : lastName // ignore: cast_nullable_to_non_nullable
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String,
-      age: null == age
-          ? _value.age
-          : age // ignore: cast_nullable_to_non_nullable
-              as int,
+      price: null == price
+          ? _value.price
+          : price // ignore: cast_nullable_to_non_nullable
+              as double,
+      title: null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      image: null == image
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_product with DiagnosticableTreeMixin implements _product {
-  const _$_product(
-      {required this.firstName, required this.lastName, required this.age});
+class _$_Product with DiagnosticableTreeMixin implements _Product {
+  const _$_Product(
+      {required this.category,
+      required this.id,
+      required this.price,
+      required this.title,
+      required this.image});
 
-  factory _$_product.fromJson(Map<String, dynamic> json) =>
-      _$$_productFromJson(json);
+  factory _$_Product.fromJson(Map<String, dynamic> json) =>
+      _$$_ProductFromJson(json);
 
   @override
-  final String firstName;
+  final String category;
   @override
-  final String lastName;
+  final String id;
   @override
-  final int age;
+  final double price;
+  @override
+  final String title;
+  @override
+  final String image;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'product(firstName: $firstName, lastName: $lastName, age: $age)';
+    return 'Product(category: $category, id: $id, price: $price, title: $title, image: $image)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'product'))
-      ..add(DiagnosticsProperty('firstName', firstName))
-      ..add(DiagnosticsProperty('lastName', lastName))
-      ..add(DiagnosticsProperty('age', age));
+      ..add(DiagnosticsProperty('type', 'Product'))
+      ..add(DiagnosticsProperty('category', category))
+      ..add(DiagnosticsProperty('id', id))
+      ..add(DiagnosticsProperty('price', price))
+      ..add(DiagnosticsProperty('title', title))
+      ..add(DiagnosticsProperty('image', image));
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_product &&
-            (identical(other.firstName, firstName) ||
-                other.firstName == firstName) &&
-            (identical(other.lastName, lastName) ||
-                other.lastName == lastName) &&
-            (identical(other.age, age) || other.age == age));
+            other is _$_Product &&
+            (identical(other.category, category) ||
+                other.category == category) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.price, price) || other.price == price) &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.image, image) || other.image == image));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, firstName, lastName, age);
+  int get hashCode =>
+      Object.hash(runtimeType, category, id, price, title, image);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_productCopyWith<_$_product> get copyWith =>
-      __$$_productCopyWithImpl<_$_product>(this, _$identity);
+  _$$_ProductCopyWith<_$_Product> get copyWith =>
+      __$$_ProductCopyWithImpl<_$_Product>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_productToJson(
+    return _$$_ProductToJson(
       this,
     );
   }
 }
 
-abstract class _product implements product {
-  const factory _product(
-      {required final String firstName,
-      required final String lastName,
-      required final int age}) = _$_product;
+abstract class _Product implements Product {
+  const factory _Product(
+      {required final String category,
+      required final String id,
+      required final double price,
+      required final String title,
+      required final String image}) = _$_Product;
 
-  factory _product.fromJson(Map<String, dynamic> json) = _$_product.fromJson;
+  factory _Product.fromJson(Map<String, dynamic> json) = _$_Product.fromJson;
 
   @override
-  String get firstName;
+  String get category;
   @override
-  String get lastName;
+  String get id;
   @override
-  int get age;
+  double get price;
+  @override
+  String get title;
+  @override
+  String get image;
   @override
   @JsonKey(ignore: true)
-  _$$_productCopyWith<_$_product> get copyWith =>
+  _$$_ProductCopyWith<_$_Product> get copyWith =>
       throw _privateConstructorUsedError;
 }
