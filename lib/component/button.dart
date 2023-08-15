@@ -14,6 +14,7 @@ class FillButton extends StatelessWidget {
   final FontWeight? fontWeight;
   final double? width;
   final BorderRadius ?borderRadius;
+  final double? pressedOpacity;
 
   const FillButton(
       {Key? key,
@@ -24,13 +25,14 @@ class FillButton extends StatelessWidget {
         this.height,
         this.fontWeight,
         this.fontSize,
-        this.width, this.borderRadius})
+        this.width, this.borderRadius, this.pressedOpacity=0.4})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return CupertinoButton(
-        padding: EdgeInsets.all(0),
+        pressedOpacity: pressedOpacity,
+        padding: const EdgeInsets.all(0),
         onPressed: onPressed,
         child: Container(
             width: width ?? null,

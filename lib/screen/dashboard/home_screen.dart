@@ -22,6 +22,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
   int current = 0;
 
+  List<String> categories = ["All", "Running", "Sneakers", "Formal", "Casual"];
+  String selectedCategory = "All";
+
   final CarouselController controller = CarouselController();
   @override
   Widget build(BuildContext context) {
@@ -127,55 +130,29 @@ class _HomeScreenState extends State<HomeScreen> {
           position: current,
         ),
         SizedBox(
-          height: 80,
-          child: ListView(
-            scrollDirection: Axis.horizontal,
-            children: [
-              FillButton(
-                  title: 'All',
-                  textColor: AllColors.white,
-                  fontSize: FontSize.p1,
-                  containerColor: AllColors.black,
-                  onPressed: () {}),
-              SizedBox(
-                width: 20,
-              ),
-              FillButton(
-                  title: 'Running',
-                  textColor: AllColors.white,
-                  fontSize: FontSize.p1,
-                  containerColor: AllColors.black,
-                  onPressed: () {}),
-              SizedBox(
-                width: 20,
-              ),
-              FillButton(
-                  title: 'Sneakers',
-                  textColor: AllColors.white,
-                  fontSize: FontSize.p1,
-                  containerColor: AllColors.black,
-                  onPressed: () {}),
-              SizedBox(
-                width: 20,
-              ),
-              FillButton(
-                  title: 'Formal ',
-                  textColor: AllColors.white,
-                  fontSize: FontSize.p1,
-                  containerColor: AllColors.black,
-                  onPressed: () {}),
-              SizedBox(
-                width: 20,
-              ),
-              FillButton(
-                  title: 'Casual',
-                  textColor: AllColors.white,
-                  fontSize: FontSize.p1,
-                  containerColor: AllColors.black,
-                  onPressed: () {})
-            ],
-          ),
-        ),
+            height: 80,
+            child: ListView.builder(
+              itemCount: categories.length,
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (BuildContext context, int index) {
+                return Padding(
+                  padding: const EdgeInsets.only(right: 20),
+                  child: FillButton(
+                    pressedOpacity: 0.8,
+                      title: categories[index],
+                      textColor: selectedCategory==categories[index]?AllColors.white:AllColors.gray61,
+                      fontSize: FontSize.p1,
+                      fontWeight: FontWeight.bold,
+                      containerColor: selectedCategory==categories[index]?AllColors.black:Colors.transparent,
+                      onPressed: () {
+                        setState(() {
+                          selectedCategory=categories[index];
+                        });
+                      }
+                  ),
+                );
+              },
+            )),
         Expanded(
             child: GridView.count(
           crossAxisCount: 2,
@@ -183,8 +160,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             //for(int x=0; x<10;x++)
             Container(
-
-             padding:EdgeInsets.symmetric(horizontal: 10),
+              padding: EdgeInsets.symmetric(horizontal: 10),
               margin: EdgeInsets.all(20),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
@@ -192,15 +168,12 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
                   SizedBox(
-                    width:150,
+                    width: 150,
                     height: 150,
                     child: Image.asset(
-                       fit:BoxFit.cover,
+                      fit: BoxFit.cover,
                       'assets/yellowShoe.png',
-
-
                     ),
                   ),
                   Label(
@@ -210,20 +183,17 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   Row(
                     children: [
-
                       Label(
                         text: '\$20.99',
                         fontSize: FontSize.p1,
-
                       ),
                       Spacer(),
                       CupertinoButton(
                           padding: EdgeInsets.zero,
-                          child: SvgPicture.asset('assets/arrowForword.svg'), onPressed: (){})
-
+                          child: SvgPicture.asset('assets/arrowForword.svg'),
+                          onPressed: () {})
                     ],
                   ),
-
                 ],
               ),
             )
