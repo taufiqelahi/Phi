@@ -16,8 +16,9 @@ class DashboardScreen extends StatefulWidget {
 class _DashboardScreenState extends State<DashboardScreen> {
   List<Widget> page = [
     HomeScreen(),
-    BookmarkScreen(),
     NotificationScreen(),
+    BookmarkScreen(),
+
     ProfileScreen()
   ];
  List<Image>images=[
