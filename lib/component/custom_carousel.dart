@@ -59,21 +59,22 @@ class _CustomCarouselState extends State<CustomCarousel> {
                                         textStyle: TextStyle(
                                             fontSize: 30,
                                             fontWeight:
-                                            FontWeight.values[4],
+                                            FontWeight.w600,
                                             color: AllColors.black)),
                                     children: [
                                       TextSpan(
                                           text: ' Discount\n',
                                           style: TextStyle(
                                               fontWeight:
-                                              FontWeight.normal,
-                                              fontSize: 25)),
+                                              FontWeight.w600,
+                                              fontSize: 20)),
                                       TextSpan(
                                         text: 'on your first purchase',
                                         style: TextStyle(
+                                          color: AllColors.black.withOpacity(0.7),
                                             fontSize: 14,
                                             fontWeight:
-                                            FontWeight.values[1]),
+                                            FontWeight.w200),
                                       )
                                     ],
                                   ),
