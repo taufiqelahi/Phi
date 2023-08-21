@@ -28,7 +28,7 @@ class _ProductViewState extends State<ProductView> {
               height: 80,
 
               child: ListView.builder(
-
+padding: EdgeInsets.only(left: 24),
                 addAutomaticKeepAlives: true,
                 controller: scrollController,
               addRepaintBoundaries: true,
@@ -52,7 +52,7 @@ class _ProductViewState extends State<ProductView> {
                             ? AllColors.black
                             : Colors.transparent,
                         onPressed: () {
-                           double offset=(categories[index].length*2+(index-1)*60);
+                           double offset=(categories[index].length*2+(index-1)*70);
                           selectedCategory = categories[index];
                           scrollController.animateTo(offset, duration: Duration(milliseconds: 200), curve: Curves.easeOut);
                           setState(() {
