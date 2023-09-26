@@ -19,24 +19,22 @@ class ProductView extends StatefulWidget {
 class _ProductViewState extends State<ProductView> {
   List<String> categories = ["All", "Running", "Sneakers", "Formal", "Casual"];
   String selectedCategory = "All";
-  ScrollController scrollController= ScrollController();
+  ScrollController scrollController = ScrollController();
   @override
   Widget build(BuildContext context) {
-    return  Expanded(
+    return Expanded(
       child: Column(
         children: [
           SizedBox(
               height: 80,
-
               child: ListView.builder(
-padding: EdgeInsets.only(left: 24),
+                padding: EdgeInsets.only(left: 24),
                 addAutomaticKeepAlives: true,
                 controller: scrollController,
-              addRepaintBoundaries: true,
+                addRepaintBoundaries: true,
                 itemCount: categories.length,
                 clipBehavior: Clip.antiAliasWithSaveLayer,
                 shrinkWrap: true,
-
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (BuildContext context, int index) {
                   return Padding(
@@ -53,20 +51,21 @@ padding: EdgeInsets.only(left: 24),
                             ? AllColors.black
                             : Colors.transparent,
                         onPressed: () {
-                           double offset=(categories[index].length*2+(index-1)*70);
+                          double offset =
+                              (categories[index].length * 2 + (index - 1) * 70);
                           selectedCategory = categories[index];
-                          scrollController.animateTo(offset, duration: Duration(milliseconds: 200), curve: Curves.easeOut);
-                          setState(() {
-
-                          });
+                          scrollController.animateTo(offset,
+                              duration: Duration(milliseconds: 200),
+                              curve: Curves.easeOut);
+                          setState(() {});
                         }),
                   );
                 },
               )),
           StreamBuilder(
               stream: ProductFunc().getAllProducts(category: selectedCategory),
-              builder:
-                  (BuildContext context, AsyncSnapshot<List<Product>> snapshot) {
+              builder: (BuildContext context,
+                  AsyncSnapshot<List<Product>> snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
                   return CircularProgressIndicator();
                 }
@@ -78,44 +77,52 @@ padding: EdgeInsets.only(left: 24),
                       childAspectRatio: .7,
                       children: products
                           .map((product) => Container(
-                        padding: EdgeInsets.symmetric(horizontal: 10),
-                        margin: EdgeInsets.all(20),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: AllColors.whiteSmoke),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            SizedBox(
-                              width: 150,
-                              height: 150,
-                              child: Image.network(
-                                  fit: BoxFit.cover, '${product.image}'),
-                            ),
-                            Label(
-                              text: product.title,
-                              fontSize: FontSize.p1,
-                              fontWeight: FontWeight.bold,
-                            ),
-                            Row(
-                              children: [
-                                Label(
-                                  text: '\$${product.price}',
-                                  fontSize: FontSize.p1,
+                                padding: EdgeInsets.symmetric(horizontal: 10),
+                                margin: EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20),
+                                    color: AllColors.whiteSmoke),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    SizedBox(
+                                      width: 150,
+                                      height: 150,
+                                      child: Image.network(
+                                          fit: BoxFit.cover,
+                                          '${product.image}'),
+                                    ),
+                                    Label(
+                                      text: product.title,
+                                      fontSize: FontSize.p1,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                    Row(
+                                      children: [
+                                        Label(
+                                          text: '\$${product.price}',
+                                          fontSize: FontSize.p1,
+                                        ),
+                                        Spacer(),
+                                        CupertinoButton(
+                                            padding: EdgeInsets.zero,
+                                            child: SvgPicture.asset(
+                                                'assets/arrowForword.svg'),
+                                            onPressed: () {
+                                              Navigator.push(
+                                                  context,
+                                                  MaterialPageRoute(
+                                                      builder: (context) =>
+                                                          AddCart(
+                                                            productId:
+                                                                product.id,
+                                                          )));
+                                            })
+                                      ],
+                                    ),
+                                  ],
                                 ),
-                                Spacer(),
-                                CupertinoButton(
-                                    padding: EdgeInsets.zero,
-                                    child: SvgPicture.asset(
-                                        'assets/arrowForword.svg'),
-                                    onPressed: () {
-                                      Navigator.push(context, MaterialPageRoute(builder: (context)=>AddCart(productId: product.id,)));
-                                    })
-                              ],
-                            ),
-                          ],
-                        ),
-                      ))
+                              ))
                           .toList()),
                 );
               })
