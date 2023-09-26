@@ -71,6 +71,7 @@ padding: EdgeInsets.only(left: 24),
                   return CircularProgressIndicator();
                 }
                 List<Product> products = snapshot.data ?? [];
+
                 return Expanded(
                   child: GridView.count(
                       crossAxisCount: 2,

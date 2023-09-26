@@ -114,19 +114,19 @@ class _CustomCarouselState extends State<CustomCarousel> {
                 aspectRatio: 2.2,
               ),
             ),
-            DotsIndicator(
-
-              onTap: (index){
-                carouselController.animateToPage(index);
-                setState(() {
-
-                });
-              },
-              mainAxisSize: MainAxisSize.min,
-              position: current,
-              decorator: DotsDecorator(activeColor: AllColors.black),
-              dotsCount: widget.offers.length,
-            ),
+            // DotsIndicator(
+            //
+            //   onTap: (index){
+            //     carouselController.animateToPage(index);
+            //     setState(() {
+            //
+            //     });
+            //   },
+            //   mainAxisSize: MainAxisSize.min,
+            //   position: current,
+            //   decorator: DotsDecorator(activeColor: AllColors.black),
+            //   dotsCount: widget.offers.length,
+            // ),
           ],
         );
   }
