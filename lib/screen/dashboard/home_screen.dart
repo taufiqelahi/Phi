@@ -13,10 +13,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
-
-
-
   @override
   void initState() {
     // TODO: implement initState
@@ -58,20 +54,23 @@ class _HomeScreenState extends State<HomeScreen> {
         width: 120,
       ),
       body: Column(children: [
-       FutureBuilder(
-          future: OfferFunc().getAllOffer(),
-        builder:
-            (BuildContext context, AsyncSnapshot<List<Offer>> snapshot) {
+        FutureBuilder(
+            future: OfferFunc().getAllOffer(),
+            builder:
+                (BuildContext context, AsyncSnapshot<List<Offer>> snapshot) {
+
               if (snapshot.connectionState == ConnectionState.waiting) {
-                return Container(height: 200,);
+                return Container(
+                  height: 200,
+                );
               }
               List<Offer> offers = snapshot.data ?? [];
 
-              return CustomCarousel(offers: offers,);
+              return CustomCarousel(
+                offers: offers,
+              );
             }),
-
         const ProductView()
-
       ]),
     );
   }
