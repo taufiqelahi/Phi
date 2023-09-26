@@ -25,6 +25,7 @@ mixin _$Product {
   double get price => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   String get image => throw _privateConstructorUsedError;
+  dynamic get size => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -37,7 +38,12 @@ abstract class $ProductCopyWith<$Res> {
       _$ProductCopyWithImpl<$Res, Product>;
   @useResult
   $Res call(
-      {String category, String id, double price, String title, String image});
+      {String category,
+      String id,
+      double price,
+      String title,
+      String image,
+      dynamic size});
 }
 
 /// @nodoc
@@ -58,6 +64,7 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
     Object? price = null,
     Object? title = null,
     Object? image = null,
+    Object? size = freezed,
   }) {
     return _then(_value.copyWith(
       category: null == category
@@ -80,6 +87,10 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String,
+      size: freezed == size
+          ? _value.size
+          : size // ignore: cast_nullable_to_non_nullable
+              as dynamic,
     ) as $Val);
   }
 }
@@ -92,7 +103,12 @@ abstract class _$$_ProductCopyWith<$Res> implements $ProductCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {String category, String id, double price, String title, String image});
+      {String category,
+      String id,
+      double price,
+      String title,
+      String image,
+      dynamic size});
 }
 
 /// @nodoc
@@ -110,6 +126,7 @@ class __$$_ProductCopyWithImpl<$Res>
     Object? price = null,
     Object? title = null,
     Object? image = null,
+    Object? size = freezed,
   }) {
     return _then(_$_Product(
       category: null == category
@@ -132,6 +149,10 @@ class __$$_ProductCopyWithImpl<$Res>
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String,
+      size: freezed == size
+          ? _value.size
+          : size // ignore: cast_nullable_to_non_nullable
+              as dynamic,
     ));
   }
 }
@@ -144,7 +165,8 @@ class _$_Product with DiagnosticableTreeMixin implements _Product {
       required this.id,
       required this.price,
       required this.title,
-      required this.image});
+      required this.image,
+      required this.size});
 
   factory _$_Product.fromJson(Map<String, dynamic> json) =>
       _$$_ProductFromJson(json);
@@ -159,10 +181,12 @@ class _$_Product with DiagnosticableTreeMixin implements _Product {
   final String title;
   @override
   final String image;
+  @override
+  final dynamic size;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Product(category: $category, id: $id, price: $price, title: $title, image: $image)';
+    return 'Product(category: $category, id: $id, price: $price, title: $title, image: $image, size: $size)';
   }
 
   @override
@@ -174,7 +198,8 @@ class _$_Product with DiagnosticableTreeMixin implements _Product {
       ..add(DiagnosticsProperty('id', id))
       ..add(DiagnosticsProperty('price', price))
       ..add(DiagnosticsProperty('title', title))
-      ..add(DiagnosticsProperty('image', image));
+      ..add(DiagnosticsProperty('image', image))
+      ..add(DiagnosticsProperty('size', size));
   }
 
   @override
@@ -187,13 +212,14 @@ class _$_Product with DiagnosticableTreeMixin implements _Product {
             (identical(other.id, id) || other.id == id) &&
             (identical(other.price, price) || other.price == price) &&
             (identical(other.title, title) || other.title == title) &&
-            (identical(other.image, image) || other.image == image));
+            (identical(other.image, image) || other.image == image) &&
+            const DeepCollectionEquality().equals(other.size, size));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, category, id, price, title, image);
+  int get hashCode => Object.hash(runtimeType, category, id, price, title,
+      image, const DeepCollectionEquality().hash(size));
 
   @JsonKey(ignore: true)
   @override
@@ -215,7 +241,8 @@ abstract class _Product implements Product {
       required final String id,
       required final double price,
       required final String title,
-      required final String image}) = _$_Product;
+      required final String image,
+      required final dynamic size}) = _$_Product;
 
   factory _Product.fromJson(Map<String, dynamic> json) = _$_Product.fromJson;
 
@@ -229,6 +256,8 @@ abstract class _Product implements Product {
   String get title;
   @override
   String get image;
+  @override
+  dynamic get size;
   @override
   @JsonKey(ignore: true)
   _$$_ProductCopyWith<_$_Product> get copyWith =>

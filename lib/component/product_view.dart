@@ -5,6 +5,7 @@ import 'package:phi/backend/model/product.dart';
 import 'package:phi/backend/services/produc_func.dart';
 import 'package:phi/component/button.dart';
 import 'package:phi/component/label.dart';
+import 'package:phi/screen/add_cart.dart';
 import 'package:phi/utils/all_colors.dart';
 import 'package:phi/utils/font_size.dart';
 
@@ -106,7 +107,9 @@ padding: EdgeInsets.only(left: 24),
                                     padding: EdgeInsets.zero,
                                     child: SvgPicture.asset(
                                         'assets/arrowForword.svg'),
-                                    onPressed: () {})
+                                    onPressed: () {
+                                      Navigator.push(context, MaterialPageRoute(builder: (context)=>AddCart(productId: product.id,)));
+                                    })
                               ],
                             ),
                           ],

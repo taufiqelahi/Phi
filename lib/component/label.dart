@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:phi/utils/all_colors.dart';
 
-enum Fonts { lobster, roboto, inter ,workSans}
+enum Fonts { lobster, roboto, inter ,workSans, popins}
 
 class Label extends StatelessWidget {
   final Fonts? fonts;
@@ -17,6 +17,7 @@ class Label extends StatelessWidget {
   final Color? color;
   final TextDecoration? underline;
   final double? letterspacing;
+  final FontStyle? fontStyle;
 
   const Label({
     Key? key,
@@ -29,7 +30,8 @@ class Label extends StatelessWidget {
     this.overflow,
     this.underline,
     this.fonts,
-    this.letterspacing
+    this.letterspacing, this.fontStyle,
+
 
   }) : super(key: key);
 
@@ -38,7 +40,10 @@ class Label extends StatelessWidget {
       fontSize: fontSize ?? 14,
       fontWeight: fontWeight ?? FontWeight.normal,
       color: color ?? AllColors.black,
-      letterSpacing: letterspacing ?? 0.2
+     fontStyle: fontStyle,
+      letterSpacing: letterspacing ?? 0.2,
+
+
   );
 
   @override
@@ -50,6 +55,7 @@ class Label extends StatelessWidget {
             overflow: overflow ?? TextOverflow.visible,
             textAlign: align ?? TextAlign.left,
 
+
             style: getTextStyle));
   }
 
@@ -60,6 +66,8 @@ class Label extends StatelessWidget {
         return GoogleFonts.lobster(textStyle: defaultTextStyle);
       case Fonts.workSans:
         return GoogleFonts.workSans(textStyle: defaultTextStyle);
+      case Fonts.popins:
+        return GoogleFonts.poppins(textStyle: defaultTextStyle);
 
       case Fonts.inter:
         return GoogleFonts.inter(textStyle: defaultTextStyle);

@@ -12,6 +12,7 @@ class AllColors {
   static const Color green=Color(0xFF008000);
   static const Color whiteSmoke=Color(0xFFEFEFEF);
   static const Color gray61=Color(0xFF9c9c9c);
+  static const Color paleBlue=Color(0xFFDEE3EB);
   static const LinearGradient pinkgradient = LinearGradient(
       colors: [Color(0xFFB8227C), Color(0xFFC93061)],
       begin: Alignment.topLeft,
