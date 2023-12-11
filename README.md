@@ -20,13 +20,13 @@ This Flutter app is an e-commerce platform built with Riverpod for state managem
 ### Prerequisites
 
 - [Flutter](https://flutter.dev/docs/get-started/install)
-- [Firebase project](https://console.firebase.google.com/) with Authentication and Firestore enabled
+- [Firebase](https://console.firebase.google.com/) with Authentication and Firestore enabled
 
 
 
 ## Screenshots
 
-![Screenshot 1]![Cover](https://github.com/taufiqelahi/Phi/assets/91239229/f70f623d-d3b6-466d-a990-a9d178c7d438)
+![Cover](https://github.com/taufiqelahi/Phi/assets/91239229/f70f623d-d3b6-466d-a990-a9d178c7d438)
 
 
 ## Getting Started
@@ -39,4 +39,8 @@ These instructions will help you set up and run the project on your local machin
 
    ```bash
    git clone https://github.com/yourusername/e-commerce-app.git
+
+
+# note: This UI design getting in Figma. 
+   
 
