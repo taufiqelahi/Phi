@@ -1,8 +1,8 @@
 # E-Commerce App with Flutter
 
 
-[![Flutter](https://img.shields.io/badge/Flutter-2.8.0-blue.svg)](https://flutter.dev/)
-[![Riverpod](https://img.shields.io/badge/Riverpod-1.0.3-green.svg)](https://pub.dev/packages/riverpod)
+[![Flutter](https://img.shields.io/badge/Flutter-3.10.6-blue.svg)](https://flutter.dev/)
+[![Riverpod](https://img.shields.io/badge/Riverpod-2.3.7-green.svg)](https://pub.dev/packages/riverpod)
 [![GetX](https://img.shields.io/badge/GetX-4.6.1-blueviolet.svg)](https://pub.dev/packages/get)
 [![Firebase](https://img.shields.io/badge/Firebase-9.0.0-orange.svg)](https://pub.dev/packages/firebase)
 
