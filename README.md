@@ -15,6 +15,7 @@ This Flutter app is an e-commerce platform built with Riverpod for state managem
 - Product browsing and searching
 - User authentication with Firebase Authentication
 - Cart management with Riverpod
+- Order processing and history
 
 
 ### Prerequisites
