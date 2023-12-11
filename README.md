@@ -3,8 +3,8 @@
 
 [![Flutter](https://img.shields.io/badge/Flutter-3.10.6-blue.svg)](https://flutter.dev/)
 [![Riverpod](https://img.shields.io/badge/Riverpod-2.3.7-green.svg)](https://pub.dev/packages/riverpod)
-[![GetX](https://img.shields.io/badge/GetX-4.6.1-blueviolet.svg)](https://pub.dev/packages/get)
-[![Firebase](https://img.shields.io/badge/Firebase-9.0.0-orange.svg)](https://pub.dev/packages/firebase)
+[![GetX](https://img.shields.io/badge/GetX-4.6.5-blueviolet.svg)](https://pub.dev/packages/get)
+[![Firebase_core](https://img.shields.io/badge/Firebase-2.15.0-orange.svg)](https://pub.dev/packages/firebase)
 
 ## Overview
 
