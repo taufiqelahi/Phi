@@ -39,6 +39,7 @@ These instructions will help you set up and run the project on your local machin
 
    ```bash
    git clone https://github.com/taufiqelahi/Phi.git
+   git clone git@github.com:taufiqelahi/Phi.git
 
 
 #### note: This UI design getting in Figma. 
