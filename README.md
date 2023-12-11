@@ -2,7 +2,7 @@
 
 
 [![Flutter](https://img.shields.io/badge/Flutter-2.8.0-blue.svg)](https://flutter.dev/)
-[![Riverpod](https://img.shields.io/badge/Riverpod-1.0.3-orange.svg)](https://pub.dev/packages/riverpod)
+[![Riverpod](https://img.shields.io/badge/Riverpod-1.0.3-green.svg)](https://pub.dev/packages/riverpod)
 [![GetX](https://img.shields.io/badge/GetX-4.6.1-blueviolet.svg)](https://pub.dev/packages/get)
 [![Firebase](https://img.shields.io/badge/Firebase-9.0.0-orange.svg)](https://pub.dev/packages/firebase)
 
@@ -38,7 +38,7 @@ These instructions will help you set up and run the project on your local machin
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/e-commerce-app.git
+   git clone https://github.com/taufiqelahi/Phi.git
 
 
 # note: This UI design getting in Figma. 
