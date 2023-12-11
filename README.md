@@ -42,6 +42,6 @@ These instructions will help you set up and run the project on your local machin
    git clone git@github.com:taufiqelahi/Phi.git
 
 
-#### note: This UI design getting in Figma(https://www.figma.com/file/tZktzOdbcy3p395X4jM70h/Nike-Shoes-Mobile-App-UI-Design-(Community)?type=design&node-id=2-185&mode=design&t=JZKRBEcBgE1wgSLb-0). 
+#### note: This UI design getting in [Figma](https://www.figma.com/file/tZktzOdbcy3p395X4jM70h/Nike-Shoes-Mobile-App-UI-Design-(Community)?type=design&node-id=2-185&mode=design&t=JZKRBEcBgE1wgSLb-0). 
    
 
